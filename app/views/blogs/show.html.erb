@@ -1,0 +1,45 @@
+<% if logged_in? && current_user %>
+
+      <div id="blog_show_user"><a href="/users/<%= User.find_by_id(Blog.find_by_id(@blog.id).user_id).id %>"><%= User.find_by_id(Blog.find_by_id(@blog.id).user_id).username %></a></div>
+
+  <br>
+  <div class="blog_show_title">Title</div>
+  <div class="blog_show_title"><%= @blog.title %></div>
+  <br>
+  <div id="blog_show_content"><%= @blog.content %></div>
+  <% if current_user.id == @blog.user_id && %>
+      <div id="edit">Edit</div>
+      <div id="edit_button"><%= link_to 'Edit Blog', "/blogs/#{@blog.id}/edit", method: :get, id: "edit_button_style" %></div>
+      <div id="delete_button"><%= link_to 'Delete Blog', "/blogs/#{@blog.id}", method: :delete, id: "delete_button_style" %></div>
+  <% end %>
+  <br>
+  <% @blog.comments.all.each do |c| %>
+    <br>
+    <div class="blog_show_comment"><a href="/users/<%= User.find_by_id(c.user_id).id %>"><%= User.find_by_id(c.user_id).username %></a>:<%= c.content %></div>
+    <% if logged_in? && current_user.id == c.user_id %>
+      <div class="delete_comment_button_wrapper"><%= link_to 'Delete Comment', "/blogs/#{@blog.id}/comments/#{c.id}", method: :delete %></div>
+      <div class="delete_comment_button_wrapper"><%= link_to 'Edit', "/blogs/#{@blog.id}/comments/#{c.id}/edit", id: "delete_comment_button" %>
+      <br>
+    <% end %>
+  <% end %>
+  <br>
+  <%= form_for Comment.new, url: blog_comments_path(params[:id]) do |f| %>
+  <%= f.hidden_field :blog_id, value: params[:id] %>
+  <%= f.text_area :content, id: "comment_content_area", :placeholder => "Comment", autofocus: true%>
+  <div><%= f.submit %></div>
+<% end %>
+
+<% else %>
+<div>
+  <a href="/users/<%= @userp.id %>"><%= @userp.username %></a>
+</div>
+<div>Title:<%= @blog.title %></div>
+<div>Content:<%= @blog.content %></div>
+<br>
+<% @blog.comments.all.each do |c| %>
+  <div><%= c.content %></div>
+<% end %>
+<% end %>
+
+<script src="/assets/blogs.js"></script>
+

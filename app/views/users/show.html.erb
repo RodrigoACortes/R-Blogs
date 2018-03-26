@@ -1,0 +1,10 @@
+
+
+<div class="users_blogs_container">
+  <div><%= @user.username %> Blog's<div>
+    <br>
+  <% @user.blogs.all.each do |b| %>
+    <div><a class="user_blog_link" href="/blogs/<%= b.id %>"><%= b.title %></a></div>
+      <br>
+  <% end %>
+</div>

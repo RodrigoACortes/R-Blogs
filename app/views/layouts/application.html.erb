@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RBlogs</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+<div class="navbar_container">
+    <% if logged_in? %>
+    <div class="nav_logged_in">
+      <div class="user_profile_link"><a href="/"><%= User.find_by_id(current_user.id).username %></a></div>
+      <div><%= link_to 'Blogs', blogs_path, method: :get, class: "nav_blogs_link" %></div>
+      <div><%= link_to 'Users', users_path, method: :get, class: "nav_users_link" %></div>
+      <div><%= link_to 'Create Blog', new_blog_path, method: :get, class: "nav_create_blogs_link" %></div>
+      <div><%= link_to 'Log out', '/logout', {method: 'post', class: "nav_log_out_link"} %></div>
+      <div><%= link_to 'Settings', "/users/#{current_user.id}/edit", {method: 'get', class: "nav_settings_link"} %></div>
+    </div>
+   <% end %>
+
+    <% if !logged_in? %>
+      <div class="nav_home_link"><a href="/">Home</a></div>
+      <div><%= link_to 'Blogs', blogs_path, method: :get, class: "nav_blogs_link" %></div>
+      <div><%= link_to 'Users', users_path, method: :get, class: "nav_users_link" %></div>
+
+      <%= form_tag(login_path) do  %>
+      <div><%= text_field_tag :username, nil, :placeholder => "Username", class: "nav_usename_input", autofocus: true %></div>
+      <div><%= password_field_tag :password, nil, :placeholder => "Password", class: "nav_password_input"  %></div>
+      <div><%= submit_tag 'Login', class: "nav_log_in_button" %></div>
+      <% end %>
+    <% end %>
+</div>
+  <div class="nav_notice">
+    <div id="notice"><%= flash[:message] if flash[:message] %></div>
+  </div>
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+<h1>List of all comments:</h1>
+
+<%= form_for @comment, url: {action: "create"} do |f| %>
+
+<div>Comment: <%= f.text_area :content %></div>
+<%= f.submit %>
+<% end %>

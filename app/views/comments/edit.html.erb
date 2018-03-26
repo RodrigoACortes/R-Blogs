@@ -1,0 +1,7 @@
+<h1>Edit comment:</h1>
+
+<%= form_for @comment, url: {action: "update"} do |f| %>
+
+<div>Comment: <%= f.text_area :content %></div>
+<%= f.submit %>
+<% end %>

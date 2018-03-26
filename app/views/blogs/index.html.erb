@@ -1,0 +1,18 @@
+<div class="con">
+  <div class="container">
+    <% @blogs.reverse.each do |b| %>
+
+      <div class="blogs_container_link">
+        <div class="blog_link">
+          <a class="blogs_user_link" href="/blogs/<%= b.id %>"><%= b.title %></a>
+        </div>
+        <br>
+        <div>
+          Posted By: <a href="/users/<%= User.find_by_id(b.user_id).id %>" class="blogs_user_link"><%= User.find_by_id(b.user_id).username %></a>
+        </div>
+        <br>
+      </div>
+
+    <% end %>
+  </div>
+</div>

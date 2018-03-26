@@ -1,0 +1,33 @@
+textarea {
+    resize: none;
+}
+
+.create_blog_container{
+  text-align: center;
+  margin-top: 4vmax;
+}
+
+#create_blog_title{
+  text-align: center;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid black;
+  font-size: 1.5vmax;
+  background-color: rgba(255, 255, 255, 0);
+  margin-bottom: 4vmax;
+}
+
+#create_blog_content{
+  text-align: center;
+  font-size: 1vmax;
+  background-color: rgba(255, 255, 255, 0);
+  border-color: black;
+  outline: none;
+}
+
+#create_blog_submit{
+  background: none;
+  border-color: black;
+  cursor: pointer;
+  margin-top: 2vmax;
+}

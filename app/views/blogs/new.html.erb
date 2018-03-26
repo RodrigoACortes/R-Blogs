@@ -1,0 +1,7 @@
+<div class="create_blog_container">
+<%= form_for @blog do |f| %>
+  <div><%= f.text_field :title, :placeholder => "title", id: "create_blog_title", required: true, size: 25, maxlength: 25, autofocus: true %></div>
+  <div><%= f.text_area :content, size: "60x15", :placeholder => "content", id: "create_blog_content", required: true %></div>
+  <%= f.submit id: "create_blog_submit" %>
+<% end %>
+</div>

@@ -1,0 +1,15 @@
+<div class="website_container">
+    <h1 class="website_name">BetterThanFacebook.io</h1>
+    <div class="pic_container">
+      <div class="pic"></div>
+    </div>
+
+
+<%= form_for @user do |f| %>
+  <div class="user_new_form_container">
+    <div id="new_form_username_div"><%= f.text_field :username, required: true, id: "new_form_username", :placeholder => "Username", maxlength: 15, size: 20 %></div>
+    <div id="new_form_password_div"><%= f.password_field :password, required: true, id: "new_form_password", :placeholder => "Password", minlength: 5, size: 20 %></div>
+    <div><%= f.submit id: "new_form_submit" %></div>
+  </div>
+<% end %>
+</div>

@@ -1,0 +1,12 @@
+<h2>Edit form for user:</h2>
+
+
+<%= form_for @user do |f| %>
+
+<div>Usrename: <%= f.text_field :username, required: true %></div>
+<div>Password:  <%= f.password_field :password, required: true %></div>
+<div><h6>Password must contain at least 5 characters</h6></div>
+<%= f.submit %>
+<div><%= link_to 'Delete Account', "/users/#{current_user.id}", {method: 'delete'} %></div>
+
+<% end %>

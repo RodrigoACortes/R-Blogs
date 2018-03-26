@@ -1,0 +1,101 @@
+*{
+  font-family: sans-serif;
+}
+
+#edit{
+  text-align: center;
+}
+
+#edit_button{
+  display: none;
+  text-align: center;
+}
+
+#edit_button_style{
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+#delete_button{
+  display: none;
+  text-align: center;
+}
+
+#delete_button_style{
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.blogs_container_link{
+  text-align: center;
+    width: 100%;
+}
+
+.blogs_user_link{
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px black solid;
+  display: inline-block;
+}
+
+.con{
+  text-align: center;
+  width: 100%;
+}
+
+.blog_show_title{
+  text-align: center;
+}
+
+#blog_show_content{
+  text-align: center;
+}
+
+#blog_show_user{
+  text-align: center;
+  text-decoration: none;
+  color: red;
+}
+
+#blog_show_user a{
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  color: black;
+}
+
+.blog_show_comment{
+  text-align: center;
+}
+
+.delete_comment_button_wrapper{
+  text-align: center;
+}
+
+#delete_comment_button{
+  color: black;
+}
+
+#edit_comment_button_wrapper{
+  text-align: center;
+}
+
+#comment_content_area{
+  text-align: center;
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  font-size: 1vmax;
+}
+
+.edit_comment_button{
+  background: none;
+  outline: none;
+  border: none;
+}
+
+.comment_submit_button{
+  background: none;
+}

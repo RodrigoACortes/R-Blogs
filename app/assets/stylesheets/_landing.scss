@@ -1,0 +1,77 @@
+*{
+  margin: 0;
+  margin-top: 3px;
+}
+
+body{
+  background-image: url("https://image.ibb.co/eff30S/blog_background.jpg");
+  background-size: auto;
+}
+
+.website_container{
+  text-align: center;
+}
+
+.website_name{
+  font-size: 2.5vmax;
+  padding-top: 5vmax;
+  color: rgb(222, 23, 23);
+  width: 100%;
+}
+
+.pic_container{
+  text-align: center;
+  width: 100%;
+}
+
+.pic{
+  width: 8vmax;
+  height: 8vmax;
+  background-image: url('https://image.ibb.co/i9CoZn/website_logo.png');
+  background-size: cover;
+  margin: 0 auto;
+}
+
+.user_new_form_container{
+  text-align: center;
+  margin-top: 3vmax;
+}
+
+#new_form_username{
+  text-align: center;
+  outline: none;
+  border: none;
+  border-bottom: solid rgb(222, 23, 23) 1px;
+  font-size: 4vmax;
+  color: rgb(0, 18, 255);
+}
+
+#new_form_password{
+  text-align: center;
+  outline: none;
+  border: none;
+  border-bottom: solid rgb(222, 23, 23) 1px;
+  font-size: 4vmax;
+  color: rgb(0, 18, 255);
+}
+
+#new_form_submit{
+  text-align: center;
+  border: none;
+  background: none;
+  outline: none;
+  margin-top: 2vmax;
+  font-size: 2vmax;
+  background-color: rgba(222, 23, 23, 0.90);
+  height: 4vmax;
+  width: 13vmax;
+  color: rgb(0, 18, 255);
+}
+
+#new_form_submit:active{
+  transform: translateY(0.1vmax);
+}
+
+#new_form_submit:hover{
+  cursor: pointer;
+}

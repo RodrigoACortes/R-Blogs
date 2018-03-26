@@ -1,0 +1,140 @@
+.navbar_container{
+    position: sticky;
+    margin: 0;
+}
+
+.nav_blogs_link{
+  text-decoration: none;
+  color: black;
+  border-bottom: solid 1px black;
+  position: absolute;
+  left: 7vmax;
+  user-select: none;
+  font-size: 1.2vmax;
+}
+
+.nav_create_blogs_link{
+  text-decoration: none;
+  color: black;
+  border-bottom: solid 1px black;
+  position: absolute;
+  user-select: none;
+  left: 19vmax;
+  font-size: 1.2vmax;
+}
+
+.user_profile_link a{
+  position: absolute;
+  left: 1vmax;
+  font-size: 1.2vmax;
+}
+
+.nav_home_link a{
+  text-decoration: none;
+  color: black;
+  border-bottom: solid 1px black;
+  position: absolute;
+  left: 1vmax;
+  user-select: none;
+  font-size: 1.2vmax;
+}
+
+.nav_users_link{
+  text-decoration: none;
+  color: black;
+  border-bottom: solid 1px black;
+  position: absolute;
+  left: 13vmax;
+  user-select: none;
+  font-size: 1.2vmax;
+}
+
+.user_profile_link a{
+  text-decoration: none;
+  color: black;
+  border-bottom: solid 1px black;
+  position: absolute;
+  user-select: none;
+  font-size: 1.2vmax;
+}
+
+.nav_log_out_link{
+  text-decoration: none;
+  color: black;
+  border-bottom: solid 1px black;
+  position: absolute;
+  right: 2vmax;
+  user-select: none;
+  font-size: 1.2vmax;
+}
+
+.nav_settings_link{
+  text-decoration: none;
+  color: black;
+  border-bottom: solid 1px black;
+  position: absolute;
+  user-select: none;
+  right: 9vmax;
+  font-size: 1.2vmax;
+}
+
+.nav_usename_input{
+  position: absolute;
+  right: 16vmax;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-bottom: solid rgb(222, 23, 23) 1px;
+  color: rgb(0, 18, 255);
+  font-size: 1vmax;
+  margin-top: 0.5vmax;
+  margin-right: 1.3vmax;
+}
+
+.nav_password_input{
+  position: absolute;
+  right: 6vmax;
+  text-align: center;
+  outline: none;
+  border: none;
+  border-bottom: solid rgb(222, 23, 23) 1px;
+  color: rgb(0, 18, 255);
+  font-size: 1vmax;
+  margin-top: 0.5vmax;
+}
+
+.nav_log_in_button{
+  position: absolute;
+  right: 1vmax;
+  text-align: center;
+  border: none;
+  background: none;
+  outline: none;
+  padding-top: 0.2vmax;
+  font-size: 1vmax;
+  margin-top: 0.3vmax;
+  user-select: none;
+  background-color: rgb(222, 23, 23);
+  color: rgb(0, 18, 255);
+}
+
+.nav_log_in_button:active{
+  transform: translateY(0.1vmax);
+}
+
+.nav_log_in_button:hover{
+  cursor: pointer;
+}
+
+.nav_notice{
+  text-align: center;
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0);
+  font-size: 1.3vmax;
+}
+
+#notice{
+  text-align: center;
+  // position: absolute;
+  margin-top: 3.5vmax;
+}
